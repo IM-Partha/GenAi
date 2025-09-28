@@ -1,0 +1,28 @@
+.file-upload {
+max-width: 400px;
+margin: 20px auto;
+padding: 20px;
+border: 2px dashed #ccc;
+border-radius: 10px;
+text-align: center;
+font-family: Arial, sans-serif;
+background: #f9fafb;
+}
+
+.file-upload:hover {
+border-color: #2563eb;
+background: #f1f5f9;
+}
+
+.title {
+margin-bottom: 15px;
+font-size: 18px;
+color: #111827;
+}
+
+input[type="file"] {
+display: block;
+margin: 0 auto;
+padding: 8px;
+cursor: pointer;
+}

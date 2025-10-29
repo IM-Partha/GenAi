@@ -1,28 +1,31 @@
-.file-upload {
-max-width: 400px;
-margin: 20px auto;
-padding: 20px;
-border: 2px dashed #ccc;
-border-radius: 10px;
-text-align: center;
-font-family: Arial, sans-serif;
-background: #f9fafb;
+.summary-section {
+  margin-top: 1.5rem;
+  text-align: center;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 1rem;
 }
 
-.file-upload:hover {
-border-color: #2563eb;
-background: #f1f5f9;
+.summary-section h3 {
+  color: #111827;
+  margin-bottom: 0.5rem;
 }
 
-.title {
-margin-bottom: 15px;
-font-size: 18px;
-color: #111827;
+.preview-image {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 0.5rem;
 }
 
-input[type="file"] {
-display: block;
-margin: 0 auto;
-padding: 8px;
-cursor: pointer;
+.summary-text {
+  color: #374151;
+  font-size: 0.95rem;
 }
+
+.error-text {
+  color: #dc2626;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+

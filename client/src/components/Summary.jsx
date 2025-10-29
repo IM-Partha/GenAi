@@ -4,7 +4,7 @@ import Loader from './Loader'
 
 function Summary({file}) {
 
-  const genAI = new GoogleGenerativeAI("AIzaSyDpOChrYwPklBKaOctskwxbt5FzUBFYOSc");
+  const genAI = new GoogleGenerativeAI("AIzaSyCxaYf5Bq5U_RhDlumHdZKmVGlvTbHYkjo");
   const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
   const [summary,setSummary] = useState("");
   const [status, setStatus] = useState("idle");
@@ -49,7 +49,7 @@ function Summary({file}) {
           status === 'loading' ?
           <Loader /> :
           status === 'success' ?
-          <p>{summary}</p> :
+          <p>{summary.length > 0 ? "PDF Uploaded Successfully" : "PDF Has Not Been Uploaded"}</p>:
           status === 'error' ?
           <p>Error getting the summary</p> :
           ''

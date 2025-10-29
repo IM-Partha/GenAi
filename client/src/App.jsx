@@ -4,6 +4,9 @@ import Summary from './components/Summary'
 import Chat from './components/Chat'
 
 import { useState } from 'react'
+import Home from './components/Home'
+
+
 
 function App() {
 
@@ -11,7 +14,7 @@ function App() {
 
   return (
     <>
-        <main className="container">
+        {/* <main className="container">
           <Header />
           {
             uploadedFile ?
@@ -22,7 +25,10 @@ function App() {
             :
             <FileUpload setFile={setUploadedFile} />
           }
-        </main>
+        </main> */}
+
+        <Home/>
+       
     </>
   )
 }

@@ -1,73 +1,172 @@
-section.chat-window {
-    padding-top: 24px;
-    
-    .chat {
-        padding: 20px;
-        background-color: #F6F6F6;
-        border-radius: 10px;
-        text-align: left;
-    
-        p {
-            border-radius: 20px;
-            margin: 2px 0;
-            font-size: 16px;
-            padding: 16px;
-            line-height: 20px;
-        }
-
-        div.loader{
-            
-            p {
-                margin: 16px 0;
-                padding: 0;
-            }
-
-        }
-    
-        div.user {
-            display: flex;
-            justify-content: flex-end;
-    
-            p {
-                width: 70%;
-                background-color: #40A0FF;
-                color: white;
-            }
-        }
-    
-        div.error {
-            p {
-                font-size: 14px;
-                color: red;
-            }
-        }
-    }
-    
-    .input-area {
-        display: flex;
-        align-items: center;
-        padding-top: 12px;
-    
-        button {
-            width: 120px;
-            height: 50px;
-            text-align: center;
-            box-sizing: border-box;
-            margin-left: 6px;
-            border-radius: 10px;
-            border: none;
-            background-color: #40A0FF;
-            color: white;
-        }
-    
-        input {
-            height: 50px;
-            box-sizing: border-box;
-            flex: 1;
-            border-radius: 10px;
-            border: 1px solid #E2E2E2;
-            padding-left: 20px;
-        }
-    }    
+/* ---------- Main Chat Window ---------- */
+.chat-window {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  height: 80vh;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
+.chat-window h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #1e293b;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* ---------- Chat Messages ---------- */
+.chat {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #f9fafb;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Each message bubble */
+.chat .user,
+.chat .model,
+.chat .error,
+.chat .loader {
+  max-width: 80%;
+  padding: 10px 14px;
+  border-radius: 12px;
+  line-height: 1.4;
+  font-size: 0.95rem;
+  word-wrap: break-word;
+}
+
+/* User message */
+.chat .user {
+  align-self: flex-end;
+  background-color: #0078ff;
+  color: white;
+}
+
+/* Model (AI) message */
+.chat .model {
+  align-self: flex-start;
+  background-color: #e5e7eb;
+  color: #111;
+}
+
+/* Error message */
+.chat .error {
+  align-self: center;
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+/* Loader message */
+.chat .loader {
+  align-self: center;
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* ---------- Input Area ---------- */
+.input-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  outline: none;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.input-area input:focus {
+  border-color: #0078ff;
+}
+
+.input-area button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #0078ff;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.input-area button:hover {
+  background-color: #005fcc;
+}
+
+/* ---------- Scrollbar ---------- */
+.chat::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 10px;
+}
+
+/* ---------- Responsive Design ---------- */
+@media (max-width: 1024px) {
+  .chat-window {
+    height: 70vh;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .chat-window {
+    height: 65vh;
+    padding: 1rem;
+  }
+
+  .chat-window h2 {
+    font-size: 1.25rem;
+  }
+
+  .chat .user,
+  .chat .model {
+    max-width: 90%;
+    font-size: 0.9rem;
+  }
+
+  .input-area input {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .chat-window {
+    height: auto;
+    padding: 1rem;
+  }
+
+  .chat {
+    max-height: 50vh;
+  }
+
+  .input-area {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .input-area button {
+    width: 100%;
+  }
+}

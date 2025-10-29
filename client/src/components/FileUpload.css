@@ -1,31 +1,153 @@
-.summary-section {
-  margin-top: 1.5rem;
+/* ---------- Container ---------- */
+.file-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   text-align: center;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  min-height: 80vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ---------- Title ---------- */
+.title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 1.5rem;
+}
+
+/* ---------- File Upload Button ---------- */
+.upload-btn {
+  display: inline-block;
+
+  color: black;
+  font-weight: 500;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+  border: none;
+  width: 100%;
+  max-width: 250px;
+}
+
+.upload-btn:hover {
+  background-color: #1d4ed8;
+  transform: scale(1.02);
+}
+
+.upload-btn:active {
+  transform: scale(0.98);
+}
+
+/* ---------- Summary Section ---------- */
+.summary-section {
+  margin-top: 2rem;
+  width: 100%;
   background: #f9fafb;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #e2e8f0;
   border-radius: 10px;
-  padding: 1rem;
+  padding: 1.5rem;
+  box-sizing: border-box;
 }
 
 .summary-section h3 {
-  color: #111827;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  color: #1f2937;
+  font-size: 1.25rem;
 }
 
 .preview-image {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 0.5rem;
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin-bottom: 1rem;
 }
 
 .summary-text {
+  font-size: 1rem;
   color: #374151;
-  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 .error-text {
   color: #dc2626;
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
 }
 
+/* ---------- Responsive Design ---------- */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .file-upload {
+    padding: 1.5rem;
+    min-height: auto;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .summary-section {
+    padding: 1rem;
+  }
+
+  .upload-btn {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 600px) {
+  .file-upload {
+    width: 90%;
+    padding: 1rem;
+    box-shadow: none;
+    min-height: auto;
+  }
+
+  .title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .upload-btn {
+    padding: 10px 15px;
+    max-width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .summary-section {
+    margin-top: 1.5rem;
+  }
+
+  .preview-image {
+    width: 70px;
+    height: 70px;
+  }
+
+  .summary-text {
+    font-size: 0.9rem;
+  }
+}
+
+/* Very Small Devices */
+@media (max-width: 400px) {
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .summary-section h3 {
+    font-size: 1rem;
+  }
+}

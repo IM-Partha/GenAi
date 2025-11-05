@@ -4,7 +4,7 @@ import Loader from './Loader'
 
 function Summary({file}) {
 
-  const genAI = new GoogleGenerativeAI("AIzaSyCxaYf5Bq5U_RhDlumHdZKmVGlvTbHYkjo");
+  const genAI = new GoogleGenerativeAI("AIzaSyDAFmTDQ1tsUBcyMCgJ0yP7VRJTd2wRNKk");
   const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
   const [summary,setSummary] = useState("");
   const [status, setStatus] = useState("idle");

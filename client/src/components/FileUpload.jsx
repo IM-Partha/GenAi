@@ -10,7 +10,7 @@ function FileUpload({ setFile }) {
   const [status, setStatus] = useState("idle");
 
   // Google Gemini API setup
-  const genAI = new GoogleGenerativeAI("AIzaSyCxaYf5Bq5U_RhDlumHdZKmVGlvTbHYkjo");
+  const genAI = new GoogleGenerativeAI("AIzaSyDAFmTDQ1tsUBcyMCgJ0yP7VRJTd2wRNKk");
   const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
   // Handle file upload

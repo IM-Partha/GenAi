@@ -4,7 +4,7 @@ import { useState } from "react";
 
 function Chat({ file }) {
   const genAI = new GoogleGenerativeAI(
-    "AIzaSyCxaYf5Bq5U_RhDlumHdZKmVGlvTbHYkjo"
+    "AIzaSyDAFmTDQ1tsUBcyMCgJ0yP7VRJTd2wRNKk"
   );
   const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
   const [messages, setMessages] = useState([]);
